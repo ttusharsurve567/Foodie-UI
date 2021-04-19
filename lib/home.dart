@@ -4,6 +4,7 @@ import 'package:foodie_ui/pages/dashboard.dart';
 import 'package:foodie_ui/pages/liked.dart';
 import 'package:foodie_ui/pages/profile.dart';
 import 'package:foodie_ui/pages/saved.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -16,6 +17,10 @@ class _HomeState extends State<Home> {
 
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Dashboard();
+
+  Future<void> _takePicture() async {
+    final imageFile = await ImagePicker().getImage(source: ImageSource.camera);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +40,7 @@ class _HomeState extends State<Home> {
             Icons.camera,
             size: 50,
           ),
-          onPressed: () {},
+          onPressed: _takePicture,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
