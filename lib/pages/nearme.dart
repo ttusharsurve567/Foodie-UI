@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Liked extends StatefulWidget {
+class NearMe extends StatefulWidget {
   @override
-  _LikedState createState() => _LikedState();
+  _NearMeState createState() => _NearMeState();
 }
 
-class _LikedState extends State<Liked> {
+class _NearMeState extends State<NearMe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black.withAlpha(5),
       body: Center(
-        child: Text('Liked'),
+        child: Text('Near Me'),
       ),
     );
   }

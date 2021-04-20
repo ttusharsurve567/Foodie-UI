@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodie_ui/pages/dashboard.dart';
-import 'package:foodie_ui/pages/liked.dart';
+import 'package:foodie_ui/pages/nearme.dart';
 import 'package:foodie_ui/pages/profile.dart';
 import 'package:foodie_ui/pages/saved.dart';
 import 'package:image_picker/image_picker.dart';
@@ -13,7 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int currentTab = 0;
-  final List<Widget> screens = [Dashboard(), Liked(), Saved(), Profile()];
+  final List<Widget> screens = [Dashboard(), Saved(), NearMe(), Profile()];
 
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Dashboard();
@@ -74,6 +73,7 @@ class _HomeState extends State<Home> {
                         Text(
                           'Home',
                           style: TextStyle(
+                              fontSize: 13,
                               color: currentTab == 0
                                   ? Colors.red
                                   : Colors.grey.shade400),
@@ -86,22 +86,23 @@ class _HomeState extends State<Home> {
                     minWidth: mediaquery / 5,
                     onPressed: () {
                       setState(() {
-                        currentScreen = Liked();
+                        currentScreen = Saved();
                         currentTab = 1;
                       });
                     },
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 13,
+                          height: 15,
                         ),
-                        FaIcon(FontAwesomeIcons.heart,
+                        Icon(Icons.bookmark_border_rounded,
                             color: currentTab == 1
                                 ? Colors.red
                                 : Colors.grey.shade400),
                         Text(
-                          'Liked',
+                          'Saved',
                           style: TextStyle(
+                              fontSize: 13,
                               color: currentTab == 1
                                   ? Colors.red
                                   : Colors.grey.shade400),
@@ -121,7 +122,7 @@ class _HomeState extends State<Home> {
                     minWidth: mediaquery / 5,
                     onPressed: () {
                       setState(() {
-                        currentScreen = Saved();
+                        currentScreen = NearMe();
                         currentTab = 2;
                       });
                     },
@@ -130,13 +131,14 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: 15,
                         ),
-                        Icon(Icons.save,
+                        Icon(Icons.near_me_outlined,
                             color: currentTab == 2
                                 ? Colors.red
                                 : Colors.grey.shade400),
                         Text(
-                          'Saved',
+                          'Near Me',
                           style: TextStyle(
+                              fontSize: 13,
                               color: currentTab == 2
                                   ? Colors.red
                                   : Colors.grey.shade400),
@@ -165,6 +167,7 @@ class _HomeState extends State<Home> {
                         Text(
                           'Profile',
                           style: TextStyle(
+                              fontSize: 13,
                               color: currentTab == 3
                                   ? Colors.red
                                   : Colors.grey.shade400),
