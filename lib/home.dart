@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: 15,
                         ),
-                        Icon(Icons.home,
+                        Icon(currentTab == 0 ? Icons.home : Icons.home_outlined,
                             color: currentTab == 0
                                 ? Colors.red
                                 : Colors.grey.shade400),
@@ -95,7 +95,10 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: 15,
                         ),
-                        Icon(Icons.bookmark_border_rounded,
+                        Icon(
+                            currentTab == 1
+                                ? Icons.bookmark
+                                : Icons.bookmark_border_rounded,
                             color: currentTab == 1
                                 ? Colors.red
                                 : Colors.grey.shade400),
@@ -131,7 +134,10 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: 15,
                         ),
-                        Icon(Icons.near_me_outlined,
+                        Icon(
+                            currentTab == 2
+                                ? Icons.near_me
+                                : Icons.near_me_outlined,
                             color: currentTab == 2
                                 ? Colors.red
                                 : Colors.grey.shade400),
@@ -160,7 +166,10 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: 15,
                         ),
-                        Icon(Icons.account_circle_rounded,
+                        Icon(
+                            currentTab == 3
+                                ? Icons.account_circle_rounded
+                                : Icons.account_circle_outlined,
                             color: currentTab == 3
                                 ? Colors.red
                                 : Colors.grey.shade400),
