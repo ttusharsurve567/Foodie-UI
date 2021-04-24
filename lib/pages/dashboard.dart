@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_ui/functions/helper_functions.dart';
+import 'package:foodie_ui/widgets/home_search_bar.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -42,12 +43,50 @@ class _DashboardState extends State<Dashboard> {
       ),
       elevation: 0,
     );
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+    final listview_height = height * 0.2;
+    final listview_height_1 = height * 0.32;
 
     return Scaffold(
       appBar: appBar,
       backgroundColor: Colors.black.withAlpha(5),
-      body: Center(
-        child: Text('Home'),
+      body: SingleChildScrollView(
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HomeSearchBar(),
+                  const Padding(
+                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 0, 8),
+                    child: Text(
+                      'Specials For You',
+                      textAlign: TextAlign.left,
+                      style:
+                          TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
+                    ),
+                  ),
+                  SizedBox(
+                    height: height * 0.02,
+                  ),
+                  const Padding(
+                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 0, 8),
+                    child: Text(
+                      'Food & Drinks',
+                      textAlign: TextAlign.left,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
