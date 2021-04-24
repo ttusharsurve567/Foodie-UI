@@ -23,25 +23,27 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final FAB = Container(
+      height: 72.0,
+      width: 72.0,
+      child: FloatingActionButton(
+        backgroundColor: Colors.red,
+        elevation: 4,
+        child: Icon(
+          Icons.camera,
+          size: 50,
+        ),
+        onPressed: _takePicture,
+      ),
+    );
+
     double mediaquery = MediaQuery.of(context).size.width;
     return Scaffold(
       body: PageStorage(
         child: currentScreen,
         bucket: bucket,
       ),
-      floatingActionButton: Container(
-        height: 72.0,
-        width: 72.0,
-        child: FloatingActionButton(
-          backgroundColor: Colors.red,
-          elevation: 4,
-          child: Icon(
-            Icons.camera,
-            size: 50,
-          ),
-          onPressed: _takePicture,
-        ),
-      ),
+      floatingActionButton: FAB,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
