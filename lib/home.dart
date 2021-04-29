@@ -117,8 +117,10 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              SizedBox(
-                width: mediaquery / 5,
+              Expanded(
+                child: SizedBox(
+                  width: mediaquery / 5,
+                ),
               ),
               Row(
                 children: [
@@ -144,7 +146,7 @@ class _HomeState extends State<Home> {
                                 ? Colors.red
                                 : Colors.grey.shade400),
                         Text(
-                          'Near Me',
+                          'Nearby',
                           style: TextStyle(
                               fontSize: 13,
                               color: currentTab == 2
