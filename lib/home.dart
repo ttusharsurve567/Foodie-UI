@@ -24,8 +24,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final FAB = Container(
-      height: 72.0,
-      width: 72.0,
+      height: 70.0,
+      width: 70.0,
       child: FloatingActionButton(
         backgroundColor: Colors.red,
         elevation: 4,
