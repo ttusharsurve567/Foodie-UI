@@ -27,6 +27,7 @@ class HomeSpecial extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
                 child: Text(
                   name,
+                  overflow: TextOverflow.fade,
                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                 ),
               ),

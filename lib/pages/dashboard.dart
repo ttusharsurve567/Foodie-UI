@@ -98,7 +98,7 @@ class _DashboardState extends State<Dashboard> {
                       'Food & Drinks',
                       textAlign: TextAlign.left,
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
                     ),
                   ),
                   Container(

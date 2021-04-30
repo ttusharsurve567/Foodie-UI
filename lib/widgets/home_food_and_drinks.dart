@@ -40,6 +40,7 @@ class HomeFoodDrink extends StatelessWidget {
                               margin: EdgeInsets.only(left: 15),
                               child: Text(
                                 restaurants,
+                                overflow: TextOverflow.fade,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 16),
                               ),
