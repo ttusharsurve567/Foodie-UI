@@ -27,68 +27,60 @@ class BuildDashBoardShimmer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HomeSearchBar(),
-              const Padding(
+              Padding(
                   padding: const EdgeInsets.fromLTRB(16.0, 10.0, 0, 8),
-                  child: ShimmerWidget.rectangular(height: 20)
-                  // Text(
-                  //   'Specials For You',
-                  //   textAlign: TextAlign.left,
-                  //   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
-                  // ),
-                  ),
-              // Container(
-              //   width: width,
-              //   height: listview_height,
-              //   child: ListView.builder(
-              //     scrollDirection: Axis.horizontal,
-              //     itemBuilder: (BuildContext context, int index) {
-              //       return HomeSpecial(width, listview_height, items[index]);
-              //     },
-              //     itemCount: items.length,
-              //   ),
-              // ),
-              // SizedBox(
-              //   height: height * 0.02,
-              // ),
-              // const Padding(
-              //   padding: const EdgeInsets.fromLTRB(16.0, 10.0, 0, 8),
-              //   child: const Text(
-              //     'Food & Drinks',
-              //     textAlign: TextAlign.left,
-              //     style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
-              //   ),
-              // ),
-              // Container(
-              //     width: width,
-              //     height: listview_height_1,
-              //     child: ListView.builder(
-              //       scrollDirection: Axis.horizontal,
-              //       itemBuilder: (BuildContext context, int index) {
-              //         return HomeFoodDrink(width, listview_height_1,
-              //             restaurants[index], type[index], rating[index]);
-              //       },
-              //       itemCount: restaurants.length,
-              //     )),
+                  child:
+                      ShimmerWidget.rectangular(height: 30, width: width / 2)),
+              Container(
+                width: width,
+                height: listview_height,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      margin: EdgeInsets.all(8),
+                      child: ShimmerWidget.rectangular(
+                        height: 0,
+                        width: width / 3,
+                        shapeBorder: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    );
+                  },
+                  itemCount: 10,
+                ),
+              ),
+              SizedBox(
+                height: height * 0.02,
+              ),
+              Padding(
+                  padding: const EdgeInsets.fromLTRB(16.0, 10.0, 0, 8),
+                  child:
+                      ShimmerWidget.rectangular(height: 30, width: width / 2)),
+              Container(
+                  width: width,
+                  height: listview_height_1,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        margin: EdgeInsets.all(10),
+                        child: ShimmerWidget.rectangular(
+                          height: listview_height_1,
+                          width: width / 1.4,
+                          shapeBorder: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                        ),
+                      );
+                    },
+                    itemCount: 10,
+                  )),
             ],
           ),
           Container(
-            width: 103,
-            child: FlatButton(
-              onPressed: () {},
-              child: Row(
-                children: [
-                  Text(
-                    'See All',
-                    style: TextStyle(color: Colors.grey, fontSize: 14),
-                  ),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: Colors.grey,
-                    size: 20,
-                  )
-                ],
-              ),
-            ),
+            width: 100,
+            child: ShimmerWidget.rectangular(height: 30),
+            margin: EdgeInsets.only(right: 10),
           ),
         ],
       ),
