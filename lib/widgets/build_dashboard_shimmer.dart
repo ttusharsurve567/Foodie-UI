@@ -59,7 +59,7 @@ class BuildDashBoardShimmer extends StatelessWidget {
                       ShimmerWidget.rectangular(height: 30, width: width / 2)),
               Container(
                   width: width,
-                  height: listview_height_1,
+                  height: listview_height_1 * 0.95,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
@@ -79,9 +79,12 @@ class BuildDashBoardShimmer extends StatelessWidget {
           ),
           Container(
             width: 100,
-            child: ShimmerWidget.rectangular(height: 30),
+            child: ShimmerWidget.rectangular(height: 25),
             margin: EdgeInsets.only(right: 10),
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

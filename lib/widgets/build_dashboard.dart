@@ -98,6 +98,9 @@ class BuildDashBoard extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
