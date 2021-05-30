@@ -40,7 +40,7 @@ class BuildDashBoardShimmer extends StatelessWidget {
                     return Container(
                       margin: EdgeInsets.all(8),
                       child: ShimmerWidget.rectangular(
-                        height: 0,
+                        height: listview_height,
                         width: width / 3,
                         shapeBorder: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
