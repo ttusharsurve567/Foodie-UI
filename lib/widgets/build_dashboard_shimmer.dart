@@ -77,13 +77,16 @@ class BuildDashBoardShimmer extends StatelessWidget {
                   )),
             ],
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             width: 100,
             child: ShimmerWidget.rectangular(height: 25),
             margin: EdgeInsets.only(right: 10),
           ),
           SizedBox(
-            height: 10,
+            height: 30,
           )
         ],
       ),
