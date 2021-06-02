@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NearMe extends StatefulWidget {
+  static const routeName = '/nearme';
   @override
   _NearMeState createState() => _NearMeState();
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Saved extends StatefulWidget {
+  static const routeName = '/saved';
   @override
   _SavedState createState() => _SavedState();
 }

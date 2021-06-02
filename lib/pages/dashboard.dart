@@ -4,6 +4,7 @@ import 'package:foodie_ui/widgets/build_dashboard.dart';
 import 'package:foodie_ui/widgets/build_dashboard_shimmer.dart';
 
 class Dashboard extends StatefulWidget {
+  static const routeName = '/dashboard';
   @override
   _DashboardState createState() => _DashboardState();
 }
